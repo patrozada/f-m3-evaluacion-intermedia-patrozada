@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./components/Card";
 import "./App.css";
 
 
@@ -89,15 +90,15 @@ function App() {
   return (
     <div className="card">
       <ul>
-        <li key={pokemon[0].id}>
-          <img src={pokemon[0].url} alt={pokemon[0].name}/>
-          <h3 className="pokemonName">{pokemon[0].name}</h3>
-          <ul className="pokeTypes">
-            <li>{pokemon[0].types[0]}</li>
-            <li>{pokemon[0].types[1]}</li>
-          </ul>
-          <h5>{pokemon[0].evolution}</h5>
-        </li>
+        {pokemon.map((item)=>
+          <Card 
+            key={item.id} 
+            name={item.name}
+            types={item.types}
+            evolution={item.evolution}
+            url={item.url}
+          />
+        )}
       </ul>
     </div>
   );
