@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./components/Card";
+import PokeList from "./components/PokeList";
 import "./App.css";
 
 
@@ -88,18 +88,9 @@ const pokemon = [
 
 function App() {
   return (
-    <div className="card">
-      <ul>
-        {pokemon.map((item)=>
-          <Card 
-            key={item.id} 
-            name={item.name}
-            types={item.types}
-            evolution={item.evolution}
-            url={item.url}
-          />
-        )}
-      </ul>
+    <div className="container">
+      <PokeList 
+        pokemon={pokemon}/>
     </div>
   );
 }

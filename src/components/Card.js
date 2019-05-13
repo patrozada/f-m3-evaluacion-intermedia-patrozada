@@ -9,12 +9,12 @@ class Card extends React.Component{
       evolution,
     }=this.props;
     return(
-      <li>
+      <li className="pokeCard">
         <img src={url} alt={name}/>
         <h3 className="pokemonName">{name}</h3>
         <ul className="pokeTypes">
-          <li>{types[0]}</li>
-          <li>{types[1]}</li>
+          <li className="type">{types[0]}</li>
+          <li className="type">{types[1]}</li>
         </ul>
         <h5>{evolution}</h5>
       </li>
