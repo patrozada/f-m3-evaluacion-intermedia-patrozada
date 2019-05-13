@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { isTemplateElement } from "@babel/types";
+
 
 const pokemon = [
   {
@@ -90,7 +90,7 @@ function App() {
     <div className="card">
       <ul>
         <li key={pokemon[0].id}>
-          <img src={pokemon[0].url} alt={`${pokemon[0].name}image`}/>
+          <img src={pokemon[0].url} alt={pokemon[0].name}/>
           <h3 className="pokemonName">{pokemon[0].name}</h3>
           <ul className="pokeTypes">
             <li>{pokemon[0].types[0]}</li>
