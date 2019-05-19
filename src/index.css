@@ -8,9 +8,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Love Ya Like A Sister', cursive;
-  font-size:20px;
-  color:#3565AE;
 }
 
 code {
@@ -21,6 +18,10 @@ header{
   display:flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-size:20px;
+  color:#3565AE;
+  text-shadow: #FECD3D 5px 3px 10px;
 }
 .header__logo{
   height: 200px;

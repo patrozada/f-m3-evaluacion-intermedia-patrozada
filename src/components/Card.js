@@ -17,7 +17,7 @@ class Card extends React.Component{
           <h3 >{name}</h3>
         </div>
         <ul className="pokeTypes">
-          {types.map((item, index) => <li className="type">{types[index]}</li>)}
+          {types.map((item, index) => <li key={`${name}${index}`} className="type">{types[index]}</li>)}
         </ul>
       </li>
     )

@@ -10,6 +10,7 @@
   align-items: center;
   font-family: 'Love Ya Like A Sister', cursive;
   color: black;
+  text-transform: capitalize;
 }
 .pokePic{
   height: 150px;

@@ -78,7 +78,7 @@ const pokemon = [
   },
   {
     id: 10,
-    name: 8,
+    name: "caterpie",
     types: ["bug"],
     evolution: null,
     url:
