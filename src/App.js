@@ -78,7 +78,7 @@ const pokemon = [
   },
   {
     id: 10,
-    name: "caterpie",
+    name: 8,
     types: ["bug"],
     evolution: null,
     url:
@@ -90,9 +90,11 @@ function App() {
   return (
     <div className="container">
       <PokeList 
-        pokemon={pokemon}/>
+        pokemon={pokemon}
+      />
     </div>
   );
-}
+  }
+
 
 export default App;

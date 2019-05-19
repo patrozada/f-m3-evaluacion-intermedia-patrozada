@@ -1,4 +1,7 @@
+
 import React from 'react';
+import PropTypes from 'prop-types';
+import '../stylesheets/Card.css'
 
 class Card extends React.Component{
   render(){
@@ -6,21 +9,26 @@ class Card extends React.Component{
       url,
       name,
       types,
-      evolution,
     }=this.props;
     return(
       <li className="pokeCard">
-        <img src={url} alt={name}/>
-        <h3 className="pokemonName">{name}</h3>
+        <img className="pokePic" src={url} alt={name}/>
+        <div className="pokemonName">
+          <h3 >{name}</h3>
+        </div>
         <ul className="pokeTypes">
-          <li className="type">{types[0]}</li>
-          <li className="type">{types[1]}</li>
+          {types.map((item, index) => <li className="type">{types[index]}</li>)}
         </ul>
-        <h5>{evolution}</h5>
       </li>
     )
   }
 }
 
-
 export default Card;
+
+
+Card.propTypes = {
+  url: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  types: PropTypes.arrayOf(PropTypes.string).isRequired,
+};

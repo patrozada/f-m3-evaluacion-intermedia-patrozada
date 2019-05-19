@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import '../stylesheets/PokeList.css'
 
 class PokeList extends React.Component{
   render(){
@@ -7,13 +8,14 @@ class PokeList extends React.Component{
     return(
       <ul className="listWrap">
         {pokemon.map((item)=>
-          <Card 
-            key={item.id} 
-            name={item.name}
-            types={item.types}
-            evolution={item.evolution}
-            url={item.url}
-          />
+          <li>
+            <Card 
+              key={item.id} 
+              name={item.name}
+              types={item.types}
+              url={item.url}
+            />
+          </li>
         )}
     </ul>
     )
