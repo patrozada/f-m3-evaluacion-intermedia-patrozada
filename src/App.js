@@ -10,13 +10,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pokemon : {
-        id:'',
-        name:'',
-        types:[],
-        url:''
-      },
-      isFavorite:false,
+      pokemon : pokemon,
+      pokemonFav : []
     }
   }
 
@@ -24,7 +19,7 @@ class App extends React.Component {
     return (
       <div className="container">
         <PokeList 
-          pokemon={pokemon}
+          pokemon={this.state.pokemon}
         />
       </div>
     );
