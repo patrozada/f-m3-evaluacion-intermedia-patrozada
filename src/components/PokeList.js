@@ -3,6 +3,7 @@ import Card from './Card';
 import '../stylesheets/PokeList.css'
 
 class PokeList extends React.Component{
+
   render(){
     const {pokemon}= this.props;
     return(

@@ -1,22 +1,31 @@
 .pokeCard{
   height: 250px;
-  width:180px;
-  background-color: lightgoldenrodyellow;
-  border-radius: 10px;
-  border: 3px solid #3565AE;
+  width:180px;  
+  border-radius: 10px;  
   margin:20px;
   display:flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Love Ya Like A Sister', cursive;
+}
+.regularStyle{
+  border: 3px solid #3565AE;
+  background-color: lightgoldenrodyellow;
   color: black;
-  text-transform: capitalize;
+  text-transform: capitalize;  
+}
+.favStyle{
+  border: 4px solid #FECD3D;
+  background-color: lightsteelblue;
+  color: black;
+  text-transform: uppercase;
 }
 .pokePic{
   height: 150px;
 }
 .pokemonName{
-  border:1px solid #3565AE;
+  border-top:1px solid #3565AE;
+  border-bottom: 1px solid #3565AE;
   width: 100%;
   display:flex;
   justify-content: center;
