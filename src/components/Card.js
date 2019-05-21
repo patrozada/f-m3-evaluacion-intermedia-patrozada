@@ -6,19 +6,19 @@ import '../stylesheets/Card.css'
 class Card extends React.Component{
   constructor(props){
     super(props)
-    this.state = {
-      isFav: false
-    }
-    this.handleClickCard = this.handleClickCard.bind(this);
-  }
-  handleClickCard(){
-    this.setState({
-      isFav : !this.state.isFav
-    })
-  }
+    // this.state = {
+    //   isFav: false
+    // }
+    // this.handleClickCard = this.handleClickCard.bind(this);
+  // }
+  // handleClickCard(){
+  //   this.setState({
+  //     isFav : !this.state.isFav
+  //   })
+   }
   swapStyles(){
     let favClassName = 'pokeCard '
-    const {isFav}=this.state;
+    const {isFav}=this.props;
     if (isFav){
       favClassName += "favStyle"
       return favClassName;
@@ -29,12 +29,15 @@ class Card extends React.Component{
   }
   render(){
     const {
+      id,
       url,
       name,
       types,
+      onClickMethod,
     }=this.props;
     return(
-      <div onClick={this.handleClickCard} className={this.swapStyles()}>
+      <div onClick={onClickMethod} id = {id} className={this.swapStyles()}
+      >
         <img className="pokePic" src={url} alt={name}/>
         <div className="pokemonName">
           <h3 >{name}</h3>
