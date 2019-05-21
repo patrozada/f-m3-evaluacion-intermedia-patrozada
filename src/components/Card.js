@@ -4,18 +4,18 @@ import PropTypes from 'prop-types';
 import '../stylesheets/Card.css'
 
 class Card extends React.Component{
-  constructor(props){
-    super(props)
-    // this.state = {
-    //   isFav: false
-    // }
-    // this.handleClickCard = this.handleClickCard.bind(this);
-  // }
-  // handleClickCard(){
-  //   this.setState({
-  //     isFav : !this.state.isFav
-  //   })
-   }
+  // constructor(props){
+  //   super(props)
+  //   // this.state = {
+  //   //   isFav: false
+  //   // }
+  //   // this.handleClickCard = this.handleClickCard.bind(this);
+  // // }
+  // // handleClickCard(){
+  // //   this.setState({
+  // //     isFav : !this.state.isFav
+  // //   })
+  //  }
   swapStyles(){
     let favClassName = 'pokeCard '
     const {isFav}=this.props;

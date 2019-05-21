@@ -12,6 +12,7 @@ class App extends React.Component {
     this.state = {
       pokemon : pokemon.map((item)=>
         item = {
+          key: item.id,
           id : item.id,
           name : item.name,
           types : item.types,
@@ -24,16 +25,24 @@ class App extends React.Component {
   }
 
   handleClickCard(event){
-    const targetId = event.currentTarget.id;
-    console.log([targetId]);
-  //   this.setState(prevState => {
-  //     return {
-  //     //   pokemon[{(parseInt(targetId)-1)}]: {
-  //     // isFav : !this.state.isFav
-  //   }
-  // }
-}
-  render() {
+    const targetId = parseInt(event.currentTarget.id);
+    const currentIndex=targetId-1
+    const {pokemon}=this.state
+    this.setState(		
+      pokemon[currentIndex]= {
+        key: pokemon[currentIndex].key,
+        id :  pokemon[currentIndex].id,
+        name :  pokemon[currentIndex].name,
+        types :  pokemon[currentIndex].types,
+        evolution :  pokemon[currentIndex].evolution,
+        url :  pokemon[currentIndex].url,
+        isFav : !pokemon[currentIndex].isFav
+      }      
+		);
+  }
+  
+
+  render(){
     return (
       <div className="container">
         <PokeList 
@@ -41,8 +50,8 @@ class App extends React.Component {
           onClickMethod={this.handleClickCard}
         />
       </div>
-    );
-    }
+    )
+  }
 }
 
 
